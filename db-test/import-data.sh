@@ -4,7 +4,13 @@ sleep 90s
 
 #run the setup script to create the DB and the schema in the DB
 echo "Running setup.sql"
-/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Password1!" -i setup.sql --accept-eula
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Password1!" -i setup.sql
+# /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -i setup.sql --accept-eula
+# Run: --accept-eula
+# Run?: -i setup.sql
+# Run: -e "ACCEPT_EULA=Y"
+# /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -i setup.sql
+# /opt/mssql-tools/bin/sqlcmd -S localhost -U SA
 
 # connecting to DB
 # use password above :"Password1!"
@@ -15,9 +21,7 @@ echo "Running setup.sql"
 
 # restore database from bak file
 # source: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-backup-and-restore-database?view=sql-server-ver15
-echo "Restoring backup from /backup/SimpleLog.bak"
-/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [markedskraft] FROM DISK = N'/usr/work/backup/SimpleLog.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
-
-# is markedskraft working as a name for the db?
+# echo "Restoring backup from /backup/SimpleLog.bak"
+# /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [markedskraft] FROM DISK = N'/usr/work/backup/SimpleLog.bak' WITH FILE = 1, NOUNLOAD, REPLACE, STATS = 5"
 
 echo "Success ?"

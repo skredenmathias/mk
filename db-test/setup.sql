@@ -1,10 +1,15 @@
+PRINT N'Setting up SQL.'; 
+
 CREATE DATABASE markedskraft;
 GO
 USE markedskraft;
 GO
 
--- need table?
+PRINT N'database created.'; 
 
+RESTORE DATABASE [markedskraft] 
+FROM DISK = N'/usr/work/backup/SimpleLog.bak' 
+WITH FILE = 1, 
+NOUNLOAD, REPLACE, STATS = 5
 
--- CREATE TABLE HeroValue (id INT, name VARCHAR(50));
--- GO
+PRINT N'database restored.'; 

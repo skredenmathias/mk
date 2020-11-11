@@ -1,0 +1,1 @@
+# python code to import .bak file to ms sql database

@@ -9,4 +9,4 @@ before_script:
   - export CHROME_BIN=chromium-browser
   - sleep 3 
 
-script: pytest tests
+script: pytest --remote -k bsly001

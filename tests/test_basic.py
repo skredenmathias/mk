@@ -1,15 +1,16 @@
 import dash
 import dash_html_components as html
 from app import app
+import from selenium.webdriver as webdriver
 
-# options = webdriver.ChromeOptions()
-# options.binary_location = '/usr/bin/chromium-browser'
-# #All the arguments added for chromium to work on selenium
-# options.add_argument("--no-sandbox") #This make Chromium reachable
-# options.add_argument("--no-default-browser-check") #Overrides default choices
-# options.add_argument("--no-first-run")
-# options.add_argument("--disable-default-apps") 
-# driver = webdriver.Chrome('/home/travis/virtualenv/python3.7   /chromedriver',chrome_options=options)
+options = webdriver.ChromeOptions()
+options.binary_location = '/usr/bin/chromium-browser'
+#All the arguments added for chromium to work on selenium
+options.add_argument("--no-sandbox") #This make Chromium reachable
+options.add_argument("--no-default-browser-check") #Overrides default choices
+options.add_argument("--no-first-run")
+options.add_argument("--disable-default-apps") 
+driver = webdriver.Chrome('/home/travis/virtualenv/python3.7   /chromedriver',chrome_options=options)
 
 
 # 2. give each testcase a tcid, and pass the fixture

@@ -5,8 +5,8 @@ services:
 
 before_script:
   - wget http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip
-  - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.7
+  - unzip chromedriver_linux64.zip -d C:\Program Files\heroku\bin #/home/travis/virtualenv/python3.7
   - export CHROME_BIN=chromium-browser
   - sleep 3 
 
-script: pytest --remote -k bsly001
+script: pytest --log-cli-level DEBUG -k bsly001

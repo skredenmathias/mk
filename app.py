@@ -55,7 +55,6 @@ meta_tags=[
 
 app_name = "MK Analysis"
 
-server.secret_key = os.environ.get("SECRET_KEY", "default-secret-key")
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, meta_tags=meta_tags)
 app.config.suppress_callback_exceptions = True # see https://dash.plot.ly/urls
 app.title = 'MK Analysis' # appears in browser title bar

@@ -52,7 +52,7 @@ meta_tags=[
     {'name': 'viewport', 'content': 'width=device-width, initial-scale=1'}
 ]
 
-^# app_name = "MK Analysis"
+# app_name = "MK Analysis"
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, meta_tags=meta_tags)
 app.config.suppress_callback_exceptions = True # see https://dash.plot.ly/urls

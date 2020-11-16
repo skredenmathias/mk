@@ -1,7 +1,7 @@
 import dash
 import dash_html_components as html
 from app import app
-import from selenium.webdriver as webdriver
+import selenium.webdriver as webdriver
 
 options = webdriver.ChromeOptions()
 options.binary_location = '/usr/bin/chromium-browser'

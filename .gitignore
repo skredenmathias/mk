@@ -104,3 +104,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# ignore .CSVs in data folder
+data/*.csv

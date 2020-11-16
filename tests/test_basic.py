@@ -12,7 +12,7 @@ from selenium.webdriver.chrome.options import Options
 # options.add_argument("--no-default-browser-check") #Overrides default choices
 # options.add_argument("--no-first-run")
 # options.add_argument("--disable-default-apps") 
-driver = webdriver.Chrome('/home/travis/virtualenv/python3.7   /chromedriver_linux64',chrome_options=options)
+driver = webdriver.Chrome('/home/travis/virtualenv/python3.7   /chromedriver_linux64') # chrome_options=options
 
 
 # 2. give each testcase a tcid, and pass the fixture

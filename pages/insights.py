@@ -16,7 +16,7 @@ column1 = dbc.Col(
             """
         
             ## Insights
-
+            html.Img(src='assets/imagefile.extension', className='img-fluid')
 
             """
         ),

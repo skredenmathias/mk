@@ -1,5 +1,6 @@
 import dash
 import dash_bootstrap_components as dbc
+from flask import Flask, json
 
 """
 https://github.com/facultyai/dash-bootstrap-components
@@ -52,7 +53,10 @@ meta_tags=[
     {'name': 'viewport', 'content': 'width=device-width, initial-scale=1'}
 ]
 
+app_name = "MK Analysis"
+
+server.secret_key = os.environ.get("SECRET_KEY", "default-secret-key")
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, meta_tags=meta_tags)
 app.config.suppress_callback_exceptions = True # see https://dash.plot.ly/urls
-app.title = 'YOUR APP NAME' # appears in browser title bar
+app.title = 'MK Analysis' # appears in browser title bar
 server = app.server

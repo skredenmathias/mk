@@ -1,12 +1,21 @@
+# before_install:
+#   - sudo apt-get update --quiet
+#   - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+
 language: python
+
+# install:
+#   - $HOME/.poetry/bin/poetry install -v
 
 services:
   - xvfb
 
-before_script:
-  - wget http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip
-  - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.7
-  - export CHROME_BIN=chromium-browser
-  - sleep 3 
+# before_script:
+#   - wget http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip
+#   - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.7
+#   - export CHROME_BIN=chromium-browser
+#   - sleep 3 
 
-script: pytest --log-cli-level DEBUG -k bsly001
+script: 
+  - pytest --log-cli-level DEBUG -k TestApp
+  # - $HOME/.poetry/bin/poetry run pytest --verbose

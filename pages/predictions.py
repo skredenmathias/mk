@@ -10,7 +10,7 @@ from joblib import load
 from app import app
 
 # Load model
-pipeline = load('assets/pipeline.joblib')
+# pipeline = load('assets/pipeline.joblib')
 
 # 2 column layout. 1st column width = 4/12
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
